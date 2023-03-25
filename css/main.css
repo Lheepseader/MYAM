@@ -102,6 +102,7 @@ h1 {
 
 .union-inner-youtube{
 	padding-top: 3%;
+	margin-left: 15px;
 
 }
 
@@ -119,3 +120,82 @@ h1 {
 }
 
 
+.trusdedBy {
+	padding: 10vh 0;
+}
+
+.trusdedBy-content {
+	text-align: center;
+}
+
+.trusdedBy h3 {
+	font-size: 1.5em;
+	font-weight: 700;
+}
+
+.trusdedBy p {
+	margin-top: 3vh;
+	line-height: 1.5em;
+}
+
+.trusdedBy-companies {
+	position: relative;
+	width: 600px;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 8vh;
+}
+
+.trusdedBy-companies-slider{
+	height: 50px;
+	display: flex;
+	transition-duration: .5s;
+}
+
+
+
+.trusdedBy-companies-item img{
+	width: 200px;
+}
+
+.arrow {
+    width:7px;
+    height:7px;
+    border-top:#cacaca 3px solid;
+    border-right:#cacaca 3px solid;
+    position: absolute;
+}
+.arrow-bg {
+    width:30px;
+    height:30px;
+    background: #fff;
+    box-shadow: 0 0 4px 2px rgba(0,0,0,.2);
+    border-radius: 50%;
+    position: relative;
+    opacity: .8;
+    cursor: pointer;
+}
+.arrow-left .arrow {
+    transform: rotate(-135deg);
+    top:10px;
+    left:10px;
+}
+.arrow-right .arrow {
+    transform: rotate(45deg);
+    top:10px;
+    left:8px;
+}
+.arrow-left {
+    position: absolute;
+    top:50%;
+    left:2px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.arrow-right {
+    position: absolute;
+    top:50%;
+    right:2px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
