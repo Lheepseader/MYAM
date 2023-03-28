@@ -1,53 +1,22 @@
-$(document).ready(function(){
-    let sliderPosition = 0; // начальная позиция дорожки
-    const sliderContainer = $('.trusdedBy-companies');
-    const sliderTrack = $('.trusdedBy-companies-slider');
-    const sliderItem = $('.trusdedBy-companies-item');
-    const sliderItemWidth = sliderItem.width();
-    const sliderContainerWidth = sliderContainer.width();
-    // ширина дорожки определяется как разница между шириной всех картинок и шириной контейнера
-    // разница нужна для того, чтобы прокрутка не проводилась дальше последнего фото
-    const sliderTrackWidth = sliderItem.length * sliderItemWidth - sliderContainerWidth; 
-    const sliderButtonPrev = $('.arrow-left');
-    const sliderButtonNext = $('.arrow-right');
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    sliderButtonPrev.on('click', function(){
-        sliderPosition += sliderItemWidth; // увеличиваем отступ при нажатии назад
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-        // поскольку отступ будет всегда отрицательный, нужно сравнивать с нулем, 
-        // чтобы исключить пустые прокрутки
-        if (sliderPosition > 0) {
-            sliderPosition = 0;
-        }
-        sliderTrack.css('transform', `translateX(${sliderPosition}px`);
-        sliderButtons();
-    });
+function showSlides(n) {
+  const slides = document.querySelectorAll(".trusdedBy-companies-item");
+  const dots = document.querySelectorAll(".circle-bg");
 
-    sliderButtonNext.on('click', function(){
-        sliderPosition -= sliderItemWidth;
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
 
-        // так как отступы отрицательные, нужно сравнить с отрицательной длинной дорожки, 
-        // чтобы исключить пустые прокрутки
-        if (sliderPosition < -sliderTrackWidth) {
-            sliderPosition = -sliderTrackWidth;
-        }
-        sliderTrack.css('transform', `translateX(${sliderPosition}px`);
-        sliderButtons();
-    });
+  slides.forEach(slide => {
+    slide.style.transform = `translateX(-${200 * (slideIndex - 1)}%)`;
+  });
 
+  dots.forEach(dot => dot.classList.remove('active'));
 
-    // скрываем кнопки prev/next, когда нельзя больше крутить
-    const sliderButtons = () => {
-        if (sliderPosition == 0) {
-            sliderButtonPrev.hide();
-        } else {
-            sliderButtonPrev.show();
-        }
-        if (sliderPosition == -sliderTrackWidth) {
-            sliderButtonNext.hide();
-        } else {
-            sliderButtonNext.show();
-        }
-    };
-    sliderButtons();
-});
+  dots[slideIndex - 1].classList.add('active');
+}
