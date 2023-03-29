@@ -141,7 +141,7 @@ h1 {
 }
 
 .trusdedBy-content p {
-	margin-top: 3vh;
+	margin-top: 24px;
 	line-height: 1.5em;
 	color: #666666;
 }
@@ -316,6 +316,7 @@ h1 {
 .customer-inner-content-buttons {
 	display: flex;
 	width: 7vw;
+	min-width: 180px;
 	justify-content: space-between;
 }
 
@@ -345,3 +346,86 @@ h1 {
 	margin: auto;
 	margin-top: 12px;
 }
+
+.customer {
+	margin-bottom: 120px;
+}
+
+.video {
+	margin-bottom: ;
+	margin-bottom: 120px;
+}
+
+.video-inner-videos {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	flex-wrap: wrap;
+	box-shadow: 1 1 ;
+}
+
+.vidoo-inner-videos-video iframe{
+	border-radius: 40px;
+	box-shadow: 0 0 10x #000;
+}
+
+.faq-inner-selects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 100px 5%;
+	margin-top: 50px;
+}
+
+.select-item {
+	display: block;
+	font-weight: 700;
+	color: #8C8C8C;
+	font-size: 1em;
+	margin: auto 0;
+	margin-left: 27px;
+}
+
+.select-arrow {
+	padding-right: 32px;
+	margin: auto 0;
+}
+
+.select-close{
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 570px;
+	height: 70px;
+	border: 1px solid #CACACA;
+	border-radius: 10px;
+}
+
+.select-open {
+	position: relative;
+	top: 70px;
+	display: none;
+	justify-content: space-between;
+	flex-direction: column;
+
+}
+
+.select-block {
+	display: flex;
+	border: 1px solid #CACACA;
+	width: 570px;
+	height: 70px;
+	background: #fff;
+	z-index: 100;
+}
+
+.select-block:active {
+	background-color: #000;
+}
+
+.select-block:hover {
+	box-shadow: 0 0 20px #000;
+}
+
+
+
+
