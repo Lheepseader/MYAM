@@ -366,12 +366,11 @@ h1 {
 	justify-content: space-between;
 	margin-top: 60px;
 	flex-wrap: wrap;
-	box-shadow: 1 1 ;
 }
 
 .vidoo-inner-videos-video iframe{
 	border-radius: 40px;
-	box-shadow: 0 0 10x #000;
+	box-shadow: 0 0 10px #000;
 }
 
 .faq-inner-selects {
@@ -612,6 +611,15 @@ p{
 		left: 20%;
 	}
 
+	.video-inner-videos {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.vidoo-inner-videos-video:first-child {
+		margin-bottom: 4em;
+	}
+
 }
 
 @media (max-width: 992px) {
@@ -727,5 +735,9 @@ p{
 
 	form button {
 		left: 28%;
+	}
+
+	iframe {
+		width: 100%;
 	}
 }
