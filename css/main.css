@@ -4,6 +4,7 @@ body {
 	font-family: 'Roboto';
 }
 
+
 a {
 	color: #666666;
 	transition-duration: .1s;
@@ -291,14 +292,12 @@ h1 {
 	color: #666666;
 }
 
-.customer-inner {
-	display: flex;
-	flex-direction: row;
-}
+
 
 .customer-inner-content {
+	width: fit-content;
 	margin: auto;
-	padding: 4% 10%;
+	padding: 4em 4em;
 }
 
 .customer-inner-content h4{
@@ -318,11 +317,37 @@ h1 {
 	margin-bottom: 3vh;
 }
 
+.customer-inner-slider{
+	width: 100%;
+	display: flex;
+	margin: auto;
+	padding-left: 1em;
+}
+
 .customer-inner-content-buttons {
 	display: flex;
 	width: 7vw;
 	min-width: 180px;
 	justify-content: space-between;
+}
+
+.customer-inner-content-button-left:active {
+	background: #000;
+	transition-duration: .1s;
+}
+.customer-inner-content-button-right:active {
+	background: #000;
+	transition-duration: .1s;
+}
+
+.customer-inner-content-button-left:hover {
+	box-shadow: 0 0 20px #000;
+	transition-duration: .1s;
+}
+
+.customer-inner-content-button-right:hover {
+	box-shadow: 0 0 20px #000;
+	transition-duration: .1s;
 }
 
 .customer-inner-content-button-left {
@@ -593,6 +618,45 @@ p{
 
 
 
+.customer-inner-content-item-wrap{
+	display: flex;
+	position: relative;
+	align-items: center;
+	justify-content: start;
+	transition-duration: .3s;
+	width: 23em;
+}
+
+.customer-inner-slider-imgs-wrap{
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	justify-content: space-around;
+	transition-duration: .3s;
+	width: 90em;
+}
+
+.customer-inner-slider-imgs {
+	overflow: hidden;
+	width: 30em;
+	margin: auto;
+}
+
+.customer-inner-img img{
+	width: 30em;
+	margin: auto;
+	display: block;
+}
+
+.customer-inner-content-item-slider{
+	min-width: 23em;
+}
+
+.customer-inner-content-item {
+	width: 23em;
+	overflow: hidden;
+}
+
 @media (max-width: 1400px) {
 	.container {
 		max-width: none;
@@ -622,6 +686,7 @@ p{
 
 }
 
+
 @media (max-width: 992px) {
 
 	.customer-inner-content {
@@ -635,7 +700,6 @@ p{
 	}
 
 	.customer-inner-img img {
-		width: 50vw;
 	}
 
 	.button {
@@ -644,6 +708,8 @@ p{
 	.footer {
 		padding: 2em 3em 1em 3em;
 	}
+
+
 }
 
 @media(max-width: 768px) {
@@ -673,9 +739,6 @@ p{
 		width: fit-content;
 		margin: auto;
 		margin-top: 6vh;
-	}
-	.customer-inner {
-		flex-wrap: wrap;
 	}
 
 	.select-close{
@@ -718,8 +781,8 @@ p{
 		margin: auto;
 	}
 
-	.customer-inner-content-item {
-		width: 80%;
+
+	.customer-inner-content-buttons {
 		margin: auto;
 	}
 
@@ -739,5 +802,13 @@ p{
 
 	iframe {
 		width: 100%;
+	}
+
+	body {
+		padding: 0 1em;
+	}
+
+	.customer-inner-slider{
+		flex-direction: column;
 	}
 }
