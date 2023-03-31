@@ -632,7 +632,6 @@ p{
 	position: relative;
 	display: flex;
 	overflow: hidden;
-	justify-content: space-around;
 	transition-duration: .3s;
 	width: 90em;
 }
@@ -694,9 +693,15 @@ p{
 	.customer-inner-content {
 		padding: 1em 0 0 1em;
 	}
-	.customer-inner-img{
+	.customer-inner-img img{
 		margin: auto;
+		width: 20em;
 	}
+
+	.customer-inner-slider-imgs {
+		width: 20em;
+	}
+
 	body {
 		font-size: 0.9em;
 	}
