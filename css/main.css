@@ -933,7 +933,15 @@ p{
 }
 
 
+@media(max-width: 376px) {
+	body{
+		font-size: 0.7em;
+	}
 
+	form button {
+		left: 22%;
+	}
+}
 
 
 
