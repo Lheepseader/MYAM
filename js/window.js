@@ -10,7 +10,7 @@ window.onload = function() {
     popup.style.padding = '20px';
     popup.style.borderRadius = '5px';
     popup.style.boxShadow = '0px 0px 10px rgba(0,0,0,0.5)';
-    popup.innerHTML = 'Здесь ваше всплывающее окно';
+    popup.innerHTML = 'Всплывающее окно';
     // Добавляем кнопку закрытия
     var closeBtn = document.createElement('button');
     closeBtn.innerText = 'Закрыть';
