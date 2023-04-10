@@ -7,6 +7,7 @@ function burgerMenu(selector) {
   button.on('click', (e) => {
     e.preventDefault();
     toggleMenu();
+    document.body.style.overflow = document.body.style.overflow === 'hidden' ? 'auto' : 'hidden';
   });
   
   links.on('click', () => toggleMenu());

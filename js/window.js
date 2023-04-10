@@ -3,6 +3,7 @@ window.onload = function() {
   setTimeout(function() {
     // Создаем элемент всплывающего окна
     var popup = document.createElement('div');
+    popup.className = "window";
     popup.style.position = 'fixed';
     popup.style.bottom = '20px'; // расположение в правом нижнем углу
     popup.style.right = '20px';
@@ -21,5 +22,5 @@ window.onload = function() {
     popup.appendChild(closeBtn);
     // Добавляем элемент всплывающего окна на страницу
     document.body.appendChild(popup);
-  }, 3000); // 3 секунды
+  }, 1000); // 3 секунды
 };

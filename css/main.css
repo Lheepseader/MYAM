@@ -63,7 +63,7 @@ h1 {
 	min-height: 4em;
 	min-width: 12em;
 	margin: auto;
-
+	cursor: pointer;
 }
 
 .button:active {
@@ -945,3 +945,20 @@ p{
 
 
 
+.window button{
+	background: #4579CB;
+	padding: 1em;
+	border-radius: 8px;
+	border: none;
+	white-space: nowrap;
+	transition-duration: .1s;
+	color: #fff;
+	font-weight: 700;
+	font-size: 0.8em;
+	cursor: pointer;
+	font-size: 0.7em;
+}
+
+.window {
+	font-size: 1.2em;
+}
